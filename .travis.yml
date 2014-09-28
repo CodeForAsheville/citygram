@@ -23,4 +23,6 @@ deploy:
     repo: CodeForAsheville/citygram
   run:
     "bundle exec rake db:create db:migrate"
-    "rake cleanup"
+    # "cd citygram"
+    # "cp .env.sample .env"
+    "bundle exec rackup"
