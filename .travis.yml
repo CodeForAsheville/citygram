@@ -24,6 +24,6 @@ deploy:
   on:
     repo: CodeForAsheville/citygram
   run:
-    - "bundle exec rake db:create db:migrate DATABASE_URL=postgres://venosqhgdsrtis:_zCmvyllGdYa-2lyRIXOOYRUdc@ec2-54-83-204-78.compute-1.amazonaws.com:5432/d87pb24ufllngf"
+    - "bundle exec rake db:create db:migrate DATABASE_URL=postgres://whchsqpistlcbk:i7U-V0Ivd49-Ztvbdpu-joSE7P@ec2-54-83-204-78.compute-1.amazonaws.com:5432/d6fm686jub8ch1"
     - "rake cleanup"
 
