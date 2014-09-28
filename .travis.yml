@@ -20,7 +20,7 @@ deploy:
   provider: heroku
   api_key:
     secure: H620R+7VCEwt8xGuziB6ZW82JJT1a5pBudT2Hq/oN4qZko4P9QSjMhuT+nhhnr0iemNIEpm24Y7i+MGOaKwXFJ+wE5yEz0jHc3w7BGRcfxZYKw8KWBrPqAFSqp1wMyo/YSAFIXOdTN2xV+19HaYUw2FCRSy9uBkn9H9cBim1V6w=
-  app: citygram
+  app: citygramavl
   on:
     repo: CodeForAsheville/citygram
   run:
