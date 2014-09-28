@@ -9,21 +9,18 @@ matrix:
   - rvm: ruby-head
   - rvm: 2.1.2
 before_script:
-  - psql -c 'create database citygram_test;' -U postgres
+- psql -c 'create database citygram_test;' -U postgres
 script:
 - cp .env.sample .env
 - bundle exec rake db:create db:migrate DATABASE_URL=postgres://localhost/citygram_test
 - bundle exec rake
-#notifications:
-#  webhooks: http://project-monitor.codeforamerica.org/projects/77db7e4d-a05a-4ee8-b7ab-3bd29c6dd1b0/status
 deploy:
   provider: heroku
   api_key:
-    secure: H620R+7VCEwt8xGuziB6ZW82JJT1a5pBudT2Hq/oN4qZko4P9QSjMhuT+nhhnr0iemNIEpm24Y7i+MGOaKwXFJ+wE5yEz0jHc3w7BGRcfxZYKw8KWBrPqAFSqp1wMyo/YSAFIXOdTN2xV+19HaYUw2FCRSy9uBkn9H9cBim1V6w=
+    secure: FfsafzVEPwUgGxf6IzvMaKsJs+mxAo1L+ip8OzGz64r1e68xMXcyqlgL8SYtcxX6Lg+UbtmwxSJzAbKpVA+QkrdsfUN5vVf6zjXii85YENIQwb6aQ6L8G8nECr5QjQnaankzqxDtC8eFpuCFbVZGKRt/fqll6RYSJXlOlqXPmJQ=
   app: citygramavl
   on:
     repo: CodeForAsheville/citygram
   run:
-    - "bundle exec rake db:create db:migrate DATABASE_URL=postgres://whchsqpistlcbk:i7U-V0Ivd49-Ztvbdpu-joSE7P@ec2-54-83-204-78.compute-1.amazonaws.com:5432/d6fm686jub8ch1"
-    - "rake cleanup"
-
+    "bundle exec rake db:create db:migrate DATABASE_URL=postgres://whchsqpist
+    "rake cleanup"
