@@ -12,8 +12,8 @@ script:
 - cp .env.sample .env
 - bundle exec rake db:create db:migrate DATABASE_URL=postgres://localhost/citygram_test
 - bundle exec rake
-notifications:
-  webhooks: http://project-monitor.codeforamerica.org/projects/77db7e4d-a05a-4ee8-b7ab-3bd29c6dd1b0/status
+#notifications:
+#  webhooks: http://project-monitor.codeforamerica.org/projects/77db7e4d-a05a-4ee8-b7ab-3bd29c6dd1b0/status
 deploy:
   provider: heroku
   api_key:
@@ -21,3 +21,7 @@ deploy:
   app: citygram
   on:
     repo: CodeForAsheville/citygram
+  run:
+    - "bundle exec rake db:create db:migrate DATABASE_URL=postgres://venosqhgdsrtis:_zCmvyllGdYa-2lyRIXOOYRUdc@ec2-54-83-204-78.compute-1.amazonaws.com:5432/d87pb24ufllngf"
+    - "rake cleanup"
+
