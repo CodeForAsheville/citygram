@@ -22,7 +22,7 @@ deploy:
   on:
     repo: CodeForAsheville/citygram
   run:
+    "cd citygram"
     "bundle exec rake db:create db:migrate"
-    # "cd citygram"
-    # "cp .env.sample .env"
+    "cp .env.sample .env"
     "bundle exec rackup"
